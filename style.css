@@ -1,0 +1,159 @@
+/* General Reset & Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; /* Prevent scroll bars unless needed */
+}
+
+/* Screens (each screen is a full viewport) */
+.screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1. Splash Screen */
+#splash-screen {
+  background: #ffffff;
+}
+.splash-logo {
+  max-width: 200px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* Main Menu Screen */
+#main-menu {
+  background: #ffffff;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 20px; /* Add spacing between the buttons */
+  align-items: center; /* Ensure buttons are centered horizontally */
+}
+
+.menu-button {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  width: 200px; /* Ensure consistent button width */
+  text-align: center;
+}
+
+.menu-button:hover {
+  background: #0056b3;
+}
+
+/* 3. Category Selection Screen */
+#category-selection {
+  flex-direction: column;
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* For the fixed button positioning */
+}
+.category-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 50vh;
+  overflow-y: auto;
+  justify-content: center;
+}
+.category-option {
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.category-option.selected {
+  background: #007bff;
+  color: #ffffff;
+}
+.category-option:hover {
+  background: #eee;
+}
+.start-game-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.start-game-btn:hover {
+  background: #218838;
+}
+
+/* 4. Gameplay Screen */
+#gameplay-screen {
+  flex-direction: column;
+  background: #ffffff;
+  padding: 20px;
+  position: relative;
+}
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background: #6c757d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.back-button:hover {
+  background: #5a6268;
+}
+.question-text {
+  margin: 50px 0;
+  font-size: 1.5rem;
+  text-align: center;
+  max-width: 80%;
+}
+.next-question-btn {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.next-question-btn:hover {
+  background: #0056b3;
+}
